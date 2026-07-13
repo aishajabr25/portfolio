@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>عائشة جبر — Aisha Jabr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F4FBFE;
+      --blue-main:#C9ECFA;
+      --secondary:#DEEAD8;
+      --accent:#EAD9A6;
+      --text:#4B3A2F;
+      --deep:#755F4D;
+      --white:#FFFFFF;
+      --blue-light:#FAFDFF;
+      --green-light:#F0F6ED;
+      --yellow-light:#FAF1D2;
+      --line:rgba(74,57,45,.14);
+      --shadow:0 18px 45px rgba(74,57,45,.10);
+      --radius-lg:28px;
+      --radius-md:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Rubik",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+    }
+    button,input,textarea{font-family:inherit}
+    .page{
+      width:min(1020px,calc(100% - 32px));
+      margin:0 auto;
+      padding:24px 0 80px;
+    }
+
+    /* language switching */
+    .lang-en{display:none}
+    body.en .lang-en{display:revert}
+    body.en .lang-ar{display:none}
+
+    .topbar{
+      position:sticky;top:0;z-index:20;
+      background:rgba(234,247,252,.9);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      width:min(1020px,calc(100% - 32px));
+      margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:12px 0;
+    }
+    .brand-mark{
+      display:flex;align-items:center;gap:10px;
+      font-weight:800;color:var(--deep);white-space:nowrap;
+    }
+    .brand-dot{
+      width:16px;height:16px;border-radius:50%;
+      background:var(--blue-main);
+      box-shadow:0 0 0 8px rgba(167,216,240,.25);
+    }
+    .nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{
+      color:var(--text);text-decoration:none;font-size:.93rem;
+      padding:6px 10px;border-radius:999px;
+    }
+    .nav-links a:hover{background:rgba(255,255,255,.55)}
+    .lang-toggle{
+      border:1px solid var(--line);
+      background:var(--white);color:var(--deep);
+      border-radius:999px;padding:6px 14px;
+      font-weight:800;font-size:.9rem;cursor:pointer;
+      transition:.18s ease;white-space:nowrap;
+    }
+    .lang-toggle:hover{background:var(--blue-main)}
+
+    h1,h2,h3,p{margin-top:0}
+
+    .hero{padding:48px 0 12px}
+    .hero-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      padding:clamp(28px,5vw,56px);
+      box-shadow:var(--shadow);
+      position:relative;overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";position:absolute;inset-inline-start:-90px;top:-90px;
+      width:250px;height:250px;border-radius:50%;
+      background:rgba(167,216,240,.38);
+    }
+    .hero-card::after{
+      content:"";position:absolute;inset-inline-end:-75px;bottom:-95px;
+      width:230px;height:230px;border-radius:50%;
+      background:rgba(200,216,193,.46);
+    }
+    .hero-content{position:relative;z-index:1}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--green-light);color:var(--deep);
+      border:1px solid rgba(200,216,193,.8);
+      padding:6px 14px;border-radius:999px;
+      font-weight:700;font-size:.95rem;margin-bottom:18px;
+    }
+    h1{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.1;letter-spacing:-.04em;
+      margin-bottom:16px;color:var(--deep);
+    }
+    .lead{
+      font-size:clamp(1.05rem,2vw,1.3rem);
+      color:rgba(74,57,45,.82);
+      max-width:720px;margin-bottom:26px;
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .btn{
+      border:0;border-radius:999px;padding:12px 20px;
+      font-weight:800;cursor:pointer;transition:.18s ease;
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      text-decoration:none;font-size:1rem;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      background:var(--blue-main);color:var(--text);
+      box-shadow:0 12px 25px rgba(86,145,174,.18);
+    }
+    .btn-secondary{background:var(--deep);color:var(--bg)}
+    .btn-soft{background:var(--secondary);color:var(--text)}
+
+    .section{padding:36px 0 0}
+    .section-heading{margin-bottom:22px;border-top:1px solid var(--line);padding-top:32px}
+    .section-heading h2{
+      font-size:clamp(1.7rem,3vw,2.5rem);
+      line-height:1.2;color:var(--deep);letter-spacing:-.03em;margin-bottom:8px;
+    }
+    .section-heading p{margin-bottom:0;color:rgba(74,57,45,.75);max-width:680px}
+
+    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .service-card{
+      background:var(--white);border:1px solid var(--line);
+      border-radius:var(--radius-md);padding:24px;
+      box-shadow:0 10px 28px rgba(74,57,45,.07);
+    }
+    .service-card:nth-child(2){background:var(--green-light)}
+    .service-card:nth-child(3){background:var(--yellow-light)}
+    .service-card:nth-child(4){background:var(--blue-light)}
+    .service-icon{
+      width:48px;height:48px;border-radius:15px;
+      display:grid;place-items:center;font-size:1.4rem;
+      background:var(--blue-main);margin-bottom:14px;
+    }
+    .service-card:nth-child(2) .service-icon{background:var(--secondary)}
+    .service-card:nth-child(3) .service-icon{background:var(--accent)}
+    .service-card:nth-child(4) .service-icon{background:var(--blue-main)}
+    .service-card h3{font-size:1.3rem;margin-bottom:8px;color:var(--deep);line-height:1.35}
+    .service-card p{color:rgba(74,57,45,.78);margin-bottom:0;font-size:1rem}
+
+    .about-card{
+      background:linear-gradient(180deg, rgba(167,216,240,.35), rgba(200,216,193,.45));
+      border:1px solid rgba(74,57,45,.12);
+      border-radius:var(--radius-lg);
+      padding:clamp(24px,4vw,40px);
+    }
+    .about-card p{margin-bottom:12px;max-width:760px}
+    .about-card p:last-child{margin-bottom:0}
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:18px;align-items:start}
+    .contact-card{
+      background:var(--white);border:1px solid var(--line);
+      border-radius:var(--radius-md);padding:24px;
+      box-shadow:0 10px 28px rgba(74,57,45,.07);
+    }
+    .contact-card h3{font-size:1.3rem;color:var(--deep);margin-bottom:8px}
+    .contact-card p{color:rgba(74,57,45,.78)}
+    .email-pill{
+      display:inline-flex;background:var(--bg);border:1px solid var(--line);
+      border-radius:999px;padding:8px 16px;font-weight:800;
+      color:var(--deep);direction:ltr;margin-bottom:16px;
+      word-break:break-all;
+    }
+    .form-field{margin-bottom:14px}
+    .form-field label{
+      display:block;font-weight:700;color:var(--deep);
+      margin-bottom:6px;font-size:.95rem;
+    }
+    .input{
+      width:100%;border:1px solid var(--line);background:var(--blue-light);
+      color:var(--text);border-radius:16px;padding:13px 14px;
+      font-size:1rem;outline:none;
+    }
+    .input:focus{
+      border-color:var(--blue-main);
+      box-shadow:0 0 0 4px rgba(167,216,240,.22);
+    }
+    textarea.input{min-height:120px;resize:vertical}
+    .form-note{
+      font-size:.88rem;color:rgba(74,57,45,.6);margin:10px 0 0;
+    }
+
+    .footer{
+      margin-top:48px;padding:28px;border-radius:var(--radius-lg);
+      background:var(--deep);color:var(--bg);
+      display:flex;align-items:center;justify-content:space-between;
+      gap:20px;flex-wrap:wrap;
+    }
+    .footer p{margin:0;color:rgba(234,247,252,.84)}
+
+    @media (max-width:800px){
+      .service-grid,.contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .topbar-inner{flex-wrap:wrap}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-mark">
+        <span class="brand-dot"></span>
+        <span class="lang-ar">عائشة جبر</span>
+        <span class="lang-en">Aisha Jabr</span>
+      </div>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#services"><span class="lang-ar">الخدمات</span><span class="lang-en">Services</span></a>
+        <a href="#about"><span class="lang-ar">من أنا</span><span class="lang-en">About</span></a>
+        <a href="#contact"><span class="lang-ar">تواصلي معي</span><span class="lang-en">Contact</span></a>
+      </nav>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-ar">English</span><span class="lang-en">عربي</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-content">
+          <span class="eyebrow">
+            <span class="lang-ar">أهلًا وسهلًا ☀️</span>
+            <span class="lang-en">Welcome ☀️</span>
+          </span>
+          <h1>
+            <span class="lang-ar">أنا عائشة، مهندسة برمجيات</span>
+            <span class="lang-en">I'm Aisha, a software engineer</span>
+          </h1>
+          <p class="lead">
+            <span class="lang-ar">أساعد أصحاب المشاريع والأفراد على بناء حضور رقمي واضح وهادئ: مواقع للأعمال، هويات بصرية متكاملة، حلول برمجية، وورشات عملية عن استخدام الذكاء الاصطناعي في الحياة الشخصية والمهنية.</span>
+            <span class="lang-en">I help business owners and individuals build a clear, calm digital presence: business websites, complete brand identities, software solutions, and hands-on workshops on using AI in personal and professional life.</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <span class="lang-ar">تواصلي معي</span>
+              <span class="lang-en">Get in touch</span>
+            </a>
+            <a class="btn btn-soft" href="#services">
+              <span class="lang-ar">استكشفي الخدمات</span>
+              <span class="lang-en">Explore services</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">ماذا أقدّم؟</span>
+          <span class="lang-en">What I offer</span>
+        </h2>
+        <p>
+          <span class="lang-ar">أربع خدمات أساسية، كلها تبدأ بجلسة تعارف قصيرة لفهم احتياجك قبل أي التزام.</span>
+          <span class="lang-en">Four core services — each starts with a short intro call to understand your needs before any commitment.</span>
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">🖥️</div>
+          <h3>
+            <span class="lang-ar">مواقع للأعمال</span>
+            <span class="lang-en">Business Websites</span>
+          </h3>
+          <p>
+            <span class="lang-ar">موقع أنيق وسريع يعرّف بعملك ويعرض خدماتك، مصمّم ليعكس شخصية مشروعك ويعمل بشكل ممتاز على الجوال.</span>
+            <span class="lang-en">An elegant, fast website that introduces your business and showcases your services — designed to reflect your project's personality and work beautifully on mobile.</span>
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>
+            <span class="lang-ar">الهوية البصرية</span>
+            <span class="lang-en">Brand Identity</span>
+          </h3>
+          <p>
+            <span class="lang-ar">نظام ألوان وخطوط ومكوّنات متكامل لعلامتك: يجعل منشوراتك وموقعك ومطبوعاتك متناسقة ومميزة بدون عناء يومي.</span>
+            <span class="lang-en">A complete color, typography, and component system for your brand — keeping your posts, website, and materials consistent and distinctive without daily effort.</span>
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>
+            <span class="lang-ar">هندسة البرمجيات</span>
+            <span class="lang-en">Software Engineering</span>
+          </h3>
+          <p>
+            <span class="lang-ar">حلول برمجية مخصصة: أدوات داخلية، أتمتة مهام متكررة، صفحات تفاعلية، وربط أنظمة ببعضها لتوفير وقتك.</span>
+            <span class="lang-en">Custom software solutions: internal tools, automation of repetitive tasks, interactive pages, and connecting systems together to save your time.</span>
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>
+            <span class="lang-ar">ورشات الذكاء الاصطناعي</span>
+            <span class="lang-en">AI Workshops</span>
+          </h3>
+          <p>
+            <span class="lang-ar">ورشات عملية تتعلمين فيها كيف تستخدمين أدوات الذكاء الاصطناعي بثقة في حياتك الشخصية والمهنية — بدون تعقيد وبأمثلة من واقعك.</span>
+            <span class="lang-en">Hands-on workshops where you learn to use AI tools with confidence in your personal and professional life — no jargon, with examples from your own world.</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">من أنا؟</span>
+          <span class="lang-en">About me</span>
+        </h2>
+      </div>
+      <div class="about-card">
+        <p>
+          <span class="lang-ar">مهندسة برمجيات أؤمن أن التقنية الجيدة هي التي تختفي: تعمل بهدوء وتترك لك التركيز على ما يهمك فعلًا. 🤍</span>
+          <span class="lang-en">I'm a software engineer who believes good technology should disappear: it works quietly and lets you focus on what actually matters. 🤍</span>
+        </p>
+        <p>
+          <span class="lang-ar">أعمل مع أصحاب المشاريع الصغيرة والأفراد الذين يريدون حضورًا رقميًا يشبههم — واضح، دافئ، وبدون تعقيد. أبدأ دائمًا بالإصغاء، ثم أبني معك خطوة بخطوة.</span>
+          <span class="lang-en">I work with small business owners and individuals who want a digital presence that feels like them — clear, warm, and uncomplicated. I always start by listening, then build with you step by step.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">تواصلي معي 💖</span>
+          <span class="lang-en">Get in touch 💖</span>
+        </h2>
+        <p>
+          <span class="lang-ar">راسليني على البريد مباشرة، أو استخدمي النموذج وسأرد عليك في أقرب وقت.</span>
+          <span class="lang-en">Email me directly, or use the form and I'll get back to you soon.</span>
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>
+            <span class="lang-ar">البريد الإلكتروني</span>
+            <span class="lang-en">Email</span>
+          </h3>
+          <span class="email-pill">aishajabr@outlook.com</span>
+          <p>
+            <span class="lang-ar">الطريقة الأسرع للتواصل المباشر.</span>
+            <span class="lang-en">The fastest way to reach me directly.</span>
+          </p>
+          <a class="btn btn-secondary" href="mailto:aishajabr@outlook.com">
+            <span class="lang-ar">أرسلي بريدًا</span>
+            <span class="lang-en">Send an email</span>
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <h3>
+            <span class="lang-ar">أو عبر النموذج</span>
+            <span class="lang-en">Or use the form</span>
+          </h3>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-field">
+              <label for="name">
+                <span class="lang-ar">الاسم</span>
+                <span class="lang-en">Name</span>
+              </label>
+              <input class="input" type="text" id="name" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">
+                <span class="lang-ar">بريدك الإلكتروني</span>
+                <span class="lang-en">Your email</span>
+              </label>
+              <input class="input" type="email" id="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="message">
+                <span class="lang-ar">رسالتك</span>
+                <span class="lang-en">Your message</span>
+              </label>
+              <textarea class="input" id="message" name="message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              <span class="lang-ar">أرسلي الرسالة</span>
+              <span class="lang-en">Send message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <span class="lang-ar">عائشة جبر — مواقع، هويات، برمجيات، وورشات ذكاء اصطناعي ☀️</span>
+        <span class="lang-en">Aisha Jabr — websites, brand identities, software, and AI workshops ☀️</span>
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('langToggle');
+    const html = document.documentElement;
+
+    function setLang(lang) {
+      if (lang === 'en') {
+        document.body.classList.add('en');
+        html.lang = 'en';
+        html.dir = 'ltr';
+      } else {
+        document.body.classList.remove('en');
+        html.lang = 'ar';
+        html.dir = 'rtl';
+      }
+      localStorage.setItem('lang', lang);
+    }
+
+    toggle.addEventListener('click', () => {
+      setLang(document.body.classList.contains('en') ? 'ar' : 'en');
+    });
+
+    setLang(localStorage.getItem('lang') || 'ar');
+  </script>
+</body>
+</html>
