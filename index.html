@@ -227,6 +227,33 @@
     .step-body h3{font-size:1.1rem;color:var(--deep);margin-bottom:2px;line-height:1.5}
     .step-body p{margin-bottom:0;color:rgba(74,57,45,.75);font-size:.95rem}
 
+    .faq{display:grid;gap:12px;max-width:760px}
+    .faq details{
+      background:var(--white);border:1px solid var(--line);
+      border-radius:var(--radius-md);
+      box-shadow:0 6px 18px rgba(74,57,45,.05);
+      overflow:hidden;
+    }
+    .faq summary{
+      cursor:pointer;list-style:none;
+      padding:16px 20px;
+      font-weight:700;color:var(--deep);
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{
+      content:"+";font-size:1.3rem;font-weight:400;
+      color:var(--deep);flex:none;
+      transition:transform .18s ease;
+    }
+    .faq details[open] summary::after{transform:rotate(45deg)}
+    .faq details[open] summary{background:var(--blue-light)}
+    .faq .faq-a{
+      padding:4px 20px 16px;
+      color:rgba(74,57,45,.78);font-size:.97rem;
+    }
+    .faq .faq-a p{margin:0}
+
     .about-card{
       background:linear-gradient(180deg, rgba(167,216,240,.35), rgba(200,216,193,.45));
       border:1px solid rgba(74,57,45,.12);
@@ -613,6 +640,95 @@
           <span class="lang-ar">احجز مكالمة استراتيجية مجانية</span>
           <span class="lang-en">Book a free 1-on-1 strategy call</span>
         </a>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">أسئلة شائعة</span>
+          <span class="lang-en">FAQ</span>
+        </h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>
+            <span class="lang-ar">كم التكلفة؟</span>
+            <span class="lang-en">How much does it cost?</span>
+          </summary>
+          <div class="faq-a">
+            <p>
+              <span class="lang-ar">كل مشروع مختلف، فالسعر حسب النطاق. تعرف السعر كاملًا قبل أن نبدأ — بدون مفاجآت.</span>
+              <span class="lang-en">Every project is different, so it's priced by scope. You know the full price before we start — no surprises.</span>
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="lang-ar">كم يستغرق المشروع؟</span>
+            <span class="lang-en">How long does it take?</span>
+          </summary>
+          <div class="faq-a">
+            <p>
+              <span class="lang-ar">صفحة الهبوط عادة أسبوع إلى أسبوعين، والموقع المتكامل أكثر — تستلم جدولًا واضحًا مع الخطة.</span>
+              <span class="lang-en">A landing page usually takes one to two weeks; a full website longer — you get a clear timeline with the plan.</span>
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="lang-ar">هل تصممين الشعارات؟</span>
+            <span class="lang-en">Do you design logos?</span>
+          </summary>
+          <div class="faq-a">
+            <p>
+              <span class="lang-ar">لست مصممة جرافيك — أنا أبني النظام حول علامتك: ألوان، خطوط، وتناسق في كل مكان. إن احتجت شعارًا جديدًا، نعمل مع مصمم تختاره.</span>
+              <span class="lang-en">I'm not a graphic designer — I build the system around your brand: colors, fonts, and consistency everywhere. If you need a new logo, we work with a designer you choose.</span>
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="lang-ar">ماذا أجهّز قبل ما نبدأ؟</span>
+            <span class="lang-en">What should I prepare?</span>
+          </summary>
+          <div class="faq-a">
+            <p>
+              <span class="lang-ar">لا شيء إلزامي — فكرتك عن مشروعك تكفي. الصور والنصوص إن وجدت تساعد، والباقي نرتبه معًا.</span>
+              <span class="lang-en">Nothing required — your idea of your business is enough. Photos and texts help if you have them; the rest we sort out together.</span>
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="lang-ar">هل أحتاج خلفية تقنية؟</span>
+            <span class="lang-en">Do I need to be technical?</span>
+          </summary>
+          <div class="faq-a">
+            <p>
+              <span class="lang-ar">أبدًا. أشرح كل شيء ببساطة، وكل ما نبنيه ملك لك.</span>
+              <span class="lang-en">Not at all. I explain everything simply, and everything we build belongs to you.</span>
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="lang-ar">ماذا بعد الإطلاق؟</span>
+            <span class="lang-en">What happens after launch?</span>
+          </summary>
+          <div class="faq-a">
+            <p>
+              <span class="lang-ar">أبقى قريبة للتعديلات والدعم — والموقع مبني ليكبر معك متى ما احتجت.</span>
+              <span class="lang-en">I stay close for tweaks and support — and the site is built to grow with you whenever you need.</span>
+            </p>
+          </div>
+        </details>
       </div>
     </section>
 
