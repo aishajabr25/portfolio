@@ -144,6 +144,22 @@
     }
     .section-heading p{margin-bottom:0;color:rgba(74,57,45,.75);max-width:680px}
 
+    .ethos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .ethos-card{
+      border-radius:var(--radius-md);padding:22px 24px;
+      border:1px solid var(--line);
+      background:var(--blue-light);
+    }
+    .ethos-card:nth-child(2){background:var(--green-light)}
+    .ethos-card:nth-child(3){background:var(--yellow-light)}
+    .ethos-card:nth-child(4){background:var(--white)}
+    .ethos-card h3{
+      font-size:1.15rem;color:var(--deep);
+      margin-bottom:6px;line-height:1.4;
+      display:flex;align-items:center;gap:10px;
+    }
+    .ethos-card p{margin-bottom:0;color:rgba(74,57,45,.78);font-size:.98rem}
+
     .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .service-card{
       background:var(--white);border:1px solid var(--line);
@@ -215,7 +231,7 @@
     .footer p{margin:0;color:rgba(234,247,252,.84)}
 
     @media (max-width:800px){
-      .service-grid,.contact-grid{grid-template-columns:1fr}
+      .ethos-grid,.service-grid,.contact-grid{grid-template-columns:1fr}
     }
     @media (max-width:640px){
       .topbar-inner{flex-wrap:wrap}
@@ -233,6 +249,7 @@
         <span class="lang-en">Aisha Jabr</span>
       </div>
       <nav class="nav-links" aria-label="Page navigation">
+        <a href="#ethos"><span class="lang-ar">كيف أفكّر</span><span class="lang-en">How I think</span></a>
         <a href="#services"><span class="lang-ar">الخدمات</span><span class="lang-en">Services</span></a>
         <a href="#about"><span class="lang-ar">من أنا</span><span class="lang-en">About</span></a>
         <a href="#contact"><span class="lang-ar">تواصلي معي</span><span class="lang-en">Contact</span></a>
@@ -248,16 +265,16 @@
       <div class="hero-card">
         <div class="hero-content">
           <span class="eyebrow">
-            <span class="lang-ar">أهلًا وسهلًا ☀️</span>
-            <span class="lang-en">Welcome ☀️</span>
+            <span class="lang-ar">للمشاريع الصغيرة والمتوسطة ☀️</span>
+            <span class="lang-en">For small &amp; medium businesses ☀️</span>
           </span>
           <h1>
             <span class="lang-ar">أنا عائشة، مهندسة برمجيات</span>
             <span class="lang-en">I'm Aisha, a software engineer</span>
           </h1>
           <p class="lead">
-            <span class="lang-ar">أساعد أصحاب المشاريع والأفراد على بناء حضور رقمي واضح وهادئ: مواقع للأعمال، هويات بصرية متكاملة، حلول برمجية، وورشات عملية عن استخدام الذكاء الاصطناعي في الحياة الشخصية والمهنية.</span>
-            <span class="lang-en">I help business owners and individuals build a clear, calm digital presence: business websites, complete brand identities, software solutions, and hands-on workshops on using AI in personal and professional life.</span>
+            <span class="lang-ar">الشركات الكبيرة عندها فرقها التقنية.<br>أنا هنا لمشروعك أنتِ — حضور رقمي واضح، بدون تعقيد. 🤍</span>
+            <span class="lang-en">Big companies have their own tech teams.<br>I'm here for <em>your</em> business — a clear digital presence, without the overwhelm. 🤍</span>
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">
@@ -270,6 +287,61 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="ethos">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">كيف أفكّر؟</span>
+          <span class="lang-en">How I think</span>
+        </h2>
+      </div>
+
+      <div class="ethos-grid">
+        <article class="ethos-card">
+          <h3>🤍
+            <span class="lang-ar">مشروعك يستحق بنية متينة</span>
+            <span class="lang-en">Your business deserves real infrastructure</span>
+          </h3>
+          <p>
+            <span class="lang-ar">مهما كان حجمه — بنية توصلك لعملائك وتخليهم قريبين منك.</span>
+            <span class="lang-en">Whatever its size — a structure that reaches your customers and keeps them close.</span>
+          </p>
+        </article>
+
+        <article class="ethos-card">
+          <h3>💖
+            <span class="lang-ar">لا أبني لأبيع</span>
+            <span class="lang-en">I don't build just to sell</span>
+          </h3>
+          <p>
+            <span class="lang-ar">الحل لازم يشبهك: هويتك، قيمك، وطريقة شغلك.</span>
+            <span class="lang-en">The solution has to feel like you: your identity, your values, the way you work.</span>
+          </p>
+        </article>
+
+        <article class="ethos-card">
+          <h3>☀️
+            <span class="lang-ar">الذكاء الاصطناعي لصالحك</span>
+            <span class="lang-en">AI should work for you</span>
+          </h3>
+          <p>
+            <span class="lang-ar">من حقك تعرفين ما يناسبك — أدوات تضاعف شغلك، لا تخيفك.</span>
+            <span class="lang-en">You have the right to know what fits you — tools that maximize your work, not intimidate you.</span>
+          </p>
+        </article>
+
+        <article class="ethos-card">
+          <h3>🤙
+            <span class="lang-ar">إضافات أقل، أساس أقوى</span>
+            <span class="lang-en">Fewer plugins, stronger foundation</span>
+          </h3>
+          <p>
+            <span class="lang-ar">بنية بسيطة وآمنة — وجاهزة تكبر معك متى ما كبرتِ.</span>
+            <span class="lang-en">Simple and secure — and ready to scale the day you grow.</span>
+          </p>
+        </article>
       </div>
     </section>
 
