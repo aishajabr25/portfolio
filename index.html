@@ -180,6 +180,30 @@
     .service-card h3{font-size:1.3rem;margin-bottom:8px;color:var(--deep);line-height:1.35}
     .service-card p{color:rgba(74,57,45,.78);margin-bottom:0;font-size:1rem}
 
+    .steps{display:grid;gap:0;max-width:640px}
+    .step{
+      display:flex;gap:16px;align-items:flex-start;
+      position:relative;padding-bottom:26px;
+    }
+    .step:last-child{padding-bottom:0}
+    .step::before{
+      content:"";position:absolute;top:38px;bottom:2px;
+      inset-inline-start:17px;width:2px;
+      background:var(--blue-main);border-radius:2px;
+    }
+    .step:last-child::before{display:none}
+    .step-num{
+      flex:none;width:36px;height:36px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--blue-main);color:var(--deep);
+      font-weight:800;font-size:1rem;
+      box-shadow:0 0 0 6px rgba(201,236,250,.35);
+    }
+    .step:nth-child(2) .step-num{background:var(--secondary)}
+    .step:nth-child(4) .step-num{background:var(--accent)}
+    .step-body h3{font-size:1.1rem;color:var(--deep);margin-bottom:2px;line-height:1.5}
+    .step-body p{margin-bottom:0;color:rgba(74,57,45,.75);font-size:.95rem}
+
     .about-card{
       background:linear-gradient(180deg, rgba(167,216,240,.35), rgba(200,216,193,.45));
       border:1px solid rgba(74,57,45,.12);
@@ -249,10 +273,11 @@
         <span class="lang-en">Aisha Jabr</span>
       </div>
       <nav class="nav-links" aria-label="Page navigation">
-        <a href="#ethos"><span class="lang-ar">كيف أفكّر</span><span class="lang-en">How I think</span></a>
+        <a href="#ethos"><span class="lang-ar">مبادئي</span><span class="lang-en">My ethos</span></a>
         <a href="#services"><span class="lang-ar">الخدمات</span><span class="lang-en">Services</span></a>
+        <a href="#process"><span class="lang-ar">كيف نعمل</span><span class="lang-en">Process</span></a>
         <a href="#about"><span class="lang-ar">من أنا</span><span class="lang-en">About</span></a>
-        <a href="#contact"><span class="lang-ar">تواصلي معي</span><span class="lang-en">Contact</span></a>
+        <a href="#contact"><span class="lang-ar">تواصل معي</span><span class="lang-en">Contact</span></a>
       </nav>
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">
         <span class="lang-ar">English</span><span class="lang-en">عربي</span>
@@ -273,16 +298,16 @@
             <span class="lang-en">I'm Aisha, a software engineer</span>
           </h1>
           <p class="lead">
-            <span class="lang-ar">الشركات الكبيرة عندها فرقها التقنية.<br>أنا هنا لمشروعك أنتِ — حضور رقمي واضح، بدون تعقيد. 🤍</span>
+            <span class="lang-ar">الشركات الكبيرة عندها فرقها التقنية.<br>أنا هنا لمشروعك أنت — حضور رقمي واضح، بدون تعقيد. 🤍</span>
             <span class="lang-en">Big companies have their own tech teams.<br>I'm here for <em>your</em> business — a clear digital presence, without the overwhelm. 🤍</span>
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">
-              <span class="lang-ar">تواصلي معي</span>
+              <span class="lang-ar">تواصل معي</span>
               <span class="lang-en">Get in touch</span>
             </a>
             <a class="btn btn-soft" href="#services">
-              <span class="lang-ar">استكشفي الخدمات</span>
+              <span class="lang-ar">استكشف الخدمات</span>
               <span class="lang-en">Explore services</span>
             </a>
           </div>
@@ -293,8 +318,8 @@
     <section class="section" id="ethos">
       <div class="section-heading">
         <h2>
-          <span class="lang-ar">كيف أفكّر؟</span>
-          <span class="lang-en">How I think</span>
+          <span class="lang-ar">مبادئي 🤍</span>
+          <span class="lang-en">My ethos 🤍</span>
         </h2>
       </div>
 
@@ -327,7 +352,7 @@
             <span class="lang-en">AI should work for you</span>
           </h3>
           <p>
-            <span class="lang-ar">من حقك تعرفين ما يناسبك — أدوات تضاعف شغلك، لا تخيفك.</span>
+            <span class="lang-ar">من حقك تعرف ما يناسبك — أدوات تضاعف شغلك، لا تخيفك.</span>
             <span class="lang-en">You have the right to know what fits you — tools that maximize your work, not intimidate you.</span>
           </p>
         </article>
@@ -338,7 +363,7 @@
             <span class="lang-en">Fewer plugins, stronger foundation</span>
           </h3>
           <p>
-            <span class="lang-ar">بنية بسيطة وآمنة — وجاهزة تكبر معك متى ما كبرتِ.</span>
+            <span class="lang-ar">بنية بسيطة وآمنة — وجاهزة تكبر معك متى ما كبرت.</span>
             <span class="lang-en">Simple and secure — and ready to scale the day you grow.</span>
           </p>
         </article>
@@ -352,8 +377,8 @@
           <span class="lang-en">What I offer</span>
         </h2>
         <p>
-          <span class="lang-ar">أربع خدمات أساسية، كلها تبدأ بجلسة تعارف قصيرة لفهم احتياجك قبل أي التزام.</span>
-          <span class="lang-en">Four core services — each starts with a short intro call to understand your needs before any commitment.</span>
+          <span class="lang-ar">أربع خدمات — كلها تبدأ بمكالمة تعارف قصيرة، بدون أي التزام.</span>
+          <span class="lang-en">Four services — each starts with a short intro call, no commitment.</span>
         </p>
       </div>
 
@@ -365,8 +390,8 @@
             <span class="lang-en">Business Websites</span>
           </h3>
           <p>
-            <span class="lang-ar">موقع أنيق وسريع يعرّف بعملك ويعرض خدماتك، مصمّم ليعكس شخصية مشروعك ويعمل بشكل ممتاز على الجوال.</span>
-            <span class="lang-en">An elegant, fast website that introduces your business and showcases your services — designed to reflect your project's personality and work beautifully on mobile.</span>
+            <span class="lang-ar">موقع سريع وأنيق يعرّف بعملك — ويعمل بشكل ممتاز على الجوال.</span>
+            <span class="lang-en">A fast, elegant site that introduces your business — and works beautifully on mobile.</span>
           </p>
         </article>
 
@@ -377,8 +402,8 @@
             <span class="lang-en">Brand Identity</span>
           </h3>
           <p>
-            <span class="lang-ar">نظام ألوان وخطوط ومكوّنات متكامل لعلامتك: يجعل منشوراتك وموقعك ومطبوعاتك متناسقة ومميزة بدون عناء يومي.</span>
-            <span class="lang-en">A complete color, typography, and component system for your brand — keeping your posts, website, and materials consistent and distinctive without daily effort.</span>
+            <span class="lang-ar">ألوان وخطوط ونظام متكامل — علامتك متناسقة في كل مكان.</span>
+            <span class="lang-en">Colors, fonts, and a complete system — your brand consistent everywhere.</span>
           </p>
         </article>
 
@@ -389,8 +414,8 @@
             <span class="lang-en">Software Engineering</span>
           </h3>
           <p>
-            <span class="lang-ar">حلول برمجية مخصصة: أدوات داخلية، أتمتة مهام متكررة، صفحات تفاعلية، وربط أنظمة ببعضها لتوفير وقتك.</span>
-            <span class="lang-en">Custom software solutions: internal tools, automation of repetitive tasks, interactive pages, and connecting systems together to save your time.</span>
+            <span class="lang-ar">حلول مخصصة وأتمتة للمهام المتكررة — لتوفير وقتك.</span>
+            <span class="lang-en">Custom solutions and automation for repetitive tasks — to save your time.</span>
           </p>
         </article>
 
@@ -401,10 +426,95 @@
             <span class="lang-en">AI Workshops</span>
           </h3>
           <p>
-            <span class="lang-ar">ورشات عملية تتعلمين فيها كيف تستخدمين أدوات الذكاء الاصطناعي بثقة في حياتك الشخصية والمهنية — بدون تعقيد وبأمثلة من واقعك.</span>
-            <span class="lang-en">Hands-on workshops where you learn to use AI tools with confidence in your personal and professional life — no jargon, with examples from your own world.</span>
+            <span class="lang-ar">ورشات عملية لاستخدام الذكاء الاصطناعي بثقة — في حياتك الشخصية والمهنية.</span>
+            <span class="lang-en">Hands-on workshops to use AI with confidence — in your personal and professional life.</span>
           </p>
         </article>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">كيف نعمل معًا؟</span>
+          <span class="lang-en">How we work together</span>
+        </h2>
+        <p>
+          <span class="lang-ar">خمس خطوات واضحة — تعرف دائمًا أين نحن وما القادم.</span>
+          <span class="lang-en">Five clear steps — you always know where we are and what's next.</span>
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div class="step-body">
+            <h3>
+              <span class="lang-ar">مكالمة تعارف</span>
+              <span class="lang-en">Intro call</span>
+            </h3>
+            <p>
+              <span class="lang-ar">نسمع منك: أين أنت الآن، وماذا تحتاج.</span>
+              <span class="lang-en">We hear from you: where you are now, and what you need.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">2</span>
+          <div class="step-body">
+            <h3>
+              <span class="lang-ar">خطة واضحة</span>
+              <span class="lang-en">Clear plan</span>
+            </h3>
+            <p>
+              <span class="lang-ar">تعرف بالضبط ماذا سنبني، وكم يستغرق.</span>
+              <span class="lang-en">You know exactly what we'll build, and how long it takes.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">3</span>
+          <div class="step-body">
+            <h3>
+              <span class="lang-ar">البناء</span>
+              <span class="lang-en">Build</span>
+            </h3>
+            <p>
+              <span class="lang-ar">أبني وأشاركك التقدم خطوة بخطوة.</span>
+              <span class="lang-en">I build and share progress with you step by step.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">4</span>
+          <div class="step-body">
+            <h3>
+              <span class="lang-ar">الإطلاق ☀️</span>
+              <span class="lang-en">Launch ☀️</span>
+            </h3>
+            <p>
+              <span class="lang-ar">نراجع معًا، ثم ننطلق.</span>
+              <span class="lang-en">We review together, then go live.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">5</span>
+          <div class="step-body">
+            <h3>
+              <span class="lang-ar">بعد الإطلاق</span>
+              <span class="lang-en">After launch</span>
+            </h3>
+            <p>
+              <span class="lang-ar">أبقى قريبة للتعديلات والدعم.</span>
+              <span class="lang-en">I stay close for tweaks and support.</span>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -430,11 +540,11 @@
     <section class="section" id="contact">
       <div class="section-heading">
         <h2>
-          <span class="lang-ar">تواصلي معي 💖</span>
+          <span class="lang-ar">تواصل معي 💖</span>
           <span class="lang-en">Get in touch 💖</span>
         </h2>
         <p>
-          <span class="lang-ar">راسليني على البريد مباشرة، أو استخدمي النموذج وسأرد عليك في أقرب وقت.</span>
+          <span class="lang-ar">راسلني على البريد مباشرة، أو استخدم النموذج وسأرد عليك في أقرب وقت.</span>
           <span class="lang-en">Email me directly, or use the form and I'll get back to you soon.</span>
         </p>
       </div>
@@ -451,7 +561,7 @@
             <span class="lang-en">The fastest way to reach me directly.</span>
           </p>
           <a class="btn btn-secondary" href="mailto:aishajabr@outlook.com">
-            <span class="lang-ar">أرسلي بريدًا</span>
+            <span class="lang-ar">أرسل بريدًا</span>
             <span class="lang-en">Send an email</span>
           </a>
         </div>
@@ -484,7 +594,7 @@
               <textarea class="input" id="message" name="message" required></textarea>
             </div>
             <button class="btn btn-primary" type="submit">
-              <span class="lang-ar">أرسلي الرسالة</span>
+              <span class="lang-ar">أرسل الرسالة</span>
               <span class="lang-en">Send message</span>
             </button>
           </form>
