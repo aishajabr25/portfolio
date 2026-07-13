@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>عائشة جبر — Aisha Jabr</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iI0M5RUNGQSIvPjx0ZXh0IHg9IjUwIiB5PSI3MCIgZm9udC1mYW1pbHk9IlJ1YmlrLCBUYWhvbWEsIEFyaWFsIiBmb250LXNpemU9IjU4IiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjNEIzQTJGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7YuTwvdGV4dD48L3N2Zz4=" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
@@ -60,12 +61,17 @@
     }
     .brand-mark{
       display:flex;align-items:center;gap:10px;
-      font-weight:800;color:var(--deep);white-space:nowrap;
+      white-space:nowrap;text-decoration:none;
     }
-    .brand-dot{
-      width:16px;height:16px;border-radius:50%;
-      background:var(--blue-main);
-      box-shadow:0 0 0 8px rgba(167,216,240,.25);
+    .brand-logo{
+      font-weight:800;font-size:1.45rem;line-height:1;
+      color:var(--text);letter-spacing:-.01em;
+      text-shadow:2px 2px 0 rgba(74,57,45,.12);
+      direction:rtl;
+    }
+    .brand-sub{
+      font-size:.78rem;font-weight:700;color:var(--deep);
+      opacity:.75;align-self:flex-end;padding-bottom:2px;
     }
     .nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     .nav-links a{
@@ -306,6 +312,11 @@
       text-align:center;gap:12px;
     }
     .footer p{margin:0;color:rgba(234,247,252,.84)}
+    .footer-logo{
+      font-weight:800;font-size:1.6rem;line-height:1;
+      color:var(--bg);direction:rtl;
+      text-shadow:2px 2px 0 rgba(0,0,0,.15);
+    }
     .footer-link{
       color:var(--bg);font-weight:700;font-size:.92rem;
       text-decoration:none;border-bottom:1px solid rgba(234,247,252,.4);
@@ -328,11 +339,10 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand-mark">
-        <span class="brand-dot"></span>
-        <span class="lang-ar">عائشة جبر</span>
-        <span class="lang-en">Aisha Jabr</span>
-      </div>
+      <a class="brand-mark" href="#">
+        <span class="brand-logo">عَئْوْش؛</span>
+        <span class="brand-sub lang-en">Aisha Jabr</span>
+      </a>
       <nav class="nav-links" aria-label="Page navigation">
         <a href="#ethos"><span class="lang-ar">مبادئي</span><span class="lang-en">My ethos</span></a>
         <a href="#services"><span class="lang-ar">الخدمات</span><span class="lang-en">Services</span></a>
@@ -837,6 +847,7 @@
     </section>
 
     <footer class="footer">
+      <span class="footer-logo">عَئْوْش؛</span>
       <p>
         <span class="lang-ar">عائشة جبر — مواقع، هويات، برمجيات، وورشات ذكاء اصطناعي ☀️</span>
         <span class="lang-en">Aisha Jabr — websites, brand identities, software, and AI workshops ☀️</span>
