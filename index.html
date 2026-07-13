@@ -180,6 +180,29 @@
     .service-card h3{font-size:1.3rem;margin-bottom:8px;color:var(--deep);line-height:1.35}
     .service-card p{color:rgba(74,57,45,.78);margin-bottom:0;font-size:1rem}
 
+    .package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .package-card{
+      background:var(--white);border:1px solid var(--line);
+      border-radius:var(--radius-md);padding:24px;
+      box-shadow:0 10px 28px rgba(74,57,45,.07);
+      display:flex;flex-direction:column;gap:6px;
+    }
+    .package-card:nth-child(2){background:var(--green-light)}
+    .package-card:nth-child(3){background:var(--yellow-light)}
+    .package-emoji{font-size:1.6rem}
+    .package-card h3{font-size:1.2rem;color:var(--deep);margin-bottom:2px;line-height:1.4}
+    .package-card p{margin-bottom:0;color:rgba(74,57,45,.78);font-size:.96rem}
+    .package-fit{
+      margin-top:auto;padding-top:12px;
+      font-size:.88rem;color:var(--deep);font-weight:700;
+    }
+    .package-cta{
+      margin-top:20px;text-align:center;
+      background:var(--blue-light);border:1px solid var(--line);
+      border-radius:var(--radius-md);padding:24px;
+    }
+    .package-cta p{margin-bottom:14px;color:rgba(74,57,45,.8)}
+
     .steps{display:grid;gap:0;max-width:640px}
     .step{
       display:flex;gap:16px;align-items:flex-start;
@@ -255,7 +278,7 @@
     .footer p{margin:0;color:rgba(234,247,252,.84)}
 
     @media (max-width:800px){
-      .ethos-grid,.service-grid,.contact-grid{grid-template-columns:1fr}
+      .ethos-grid,.service-grid,.package-grid,.contact-grid{grid-template-columns:1fr}
     }
     @media (max-width:640px){
       .topbar-inner{flex-wrap:wrap}
@@ -276,6 +299,7 @@
         <a href="#ethos"><span class="lang-ar">مبادئي</span><span class="lang-en">My ethos</span></a>
         <a href="#services"><span class="lang-ar">الخدمات</span><span class="lang-en">Services</span></a>
         <a href="#process"><span class="lang-ar">كيف نعمل</span><span class="lang-en">Process</span></a>
+        <a href="#packages"><span class="lang-ar">الباقات</span><span class="lang-en">Packages</span></a>
         <a href="#about"><span class="lang-ar">من أنا</span><span class="lang-en">About</span></a>
         <a href="#contact"><span class="lang-ar">تواصل معي</span><span class="lang-en">Contact</span></a>
       </nav>
@@ -515,6 +539,80 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="packages">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">الباقات</span>
+          <span class="lang-en">Packages</span>
+        </h2>
+        <p>
+          <span class="lang-ar">كل مشروع مختلف — السعر حسب النطاق، نحدده معًا في مكالمة مجانية.</span>
+          <span class="lang-en">Every project is different — priced by scope, decided together on a free call.</span>
+        </p>
+      </div>
+
+      <div class="package-grid">
+        <article class="package-card">
+          <span class="package-emoji">🌼</span>
+          <h3>
+            <span class="lang-ar">صفحة هبوط</span>
+            <span class="lang-en">Landing page</span>
+          </h3>
+          <p>
+            <span class="lang-ar">صفحة واحدة تعرّف بمشروعك وتجمع العملاء المهتمين.</span>
+            <span class="lang-en">One page that introduces your business and captures interested customers.</span>
+          </p>
+          <span class="package-fit">
+            <span class="lang-ar">تناسب: بداية مشروع أو عرض محدد</span>
+            <span class="lang-en">Good for: a new business or a specific offer</span>
+          </span>
+        </article>
+
+        <article class="package-card">
+          <span class="package-emoji">☀️</span>
+          <h3>
+            <span class="lang-ar">موقع + هوية بصرية</span>
+            <span class="lang-en">Website + brand identity</span>
+          </h3>
+          <p>
+            <span class="lang-ar">موقع متكامل مع هوية تشبهك — جاهز للانطلاق.</span>
+            <span class="lang-en">A complete website with an identity that feels like you — ready to launch.</span>
+          </p>
+          <span class="package-fit">
+            <span class="lang-ar">تناسب: حضور رقمي متكامل</span>
+            <span class="lang-en">Good for: a complete digital presence</span>
+          </span>
+        </article>
+
+        <article class="package-card">
+          <span class="package-emoji">💖</span>
+          <h3>
+            <span class="lang-ar">ورشة ذكاء اصطناعي</span>
+            <span class="lang-en">AI workshop</span>
+          </h3>
+          <p>
+            <span class="lang-ar">جلسة عملية لك أو لفريقك — أدوات تناسب شغلكم فعلًا.</span>
+            <span class="lang-en">A hands-on session for you or your team — tools that actually fit your work.</span>
+          </p>
+          <span class="package-fit">
+            <span class="lang-ar">تناسب: الاستخدام الشخصي أو الفريق</span>
+            <span class="lang-en">Good for: personal use or your team</span>
+          </span>
+        </article>
+      </div>
+
+      <div class="package-cta">
+        <p>
+          <span class="lang-ar">مو متأكد من أين تبدأ؟ خلنا نتكلم أولًا. 🤍</span>
+          <span class="lang-en">Not sure where to start? Let's talk first. 🤍</span>
+        </p>
+        <a class="btn btn-primary" href="#contact">
+          <span class="lang-ar">احجز مكالمة استراتيجية مجانية</span>
+          <span class="lang-en">Book a free 1-on-1 strategy call</span>
+        </a>
       </div>
     </section>
 
