@@ -103,7 +103,9 @@
       width:230px;height:230px;border-radius:50%;
       background:rgba(200,216,193,.46);
     }
-    .hero-content{position:relative;z-index:1}
+    .hero-content{position:relative;z-index:1;text-align:center}
+    .hero-actions{justify-content:center}
+    .lead{margin-inline:auto}
     .eyebrow{
       display:inline-flex;align-items:center;gap:8px;
       background:var(--green-light);color:var(--deep);
@@ -136,13 +138,27 @@
     .btn-secondary{background:var(--deep);color:var(--bg)}
     .btn-soft{background:var(--secondary);color:var(--text)}
 
-    .section{padding:36px 0 0}
-    .section-heading{margin-bottom:22px;border-top:1px solid var(--line);padding-top:32px}
+    .section{padding:72px 0 0}
+    .section-heading{margin-bottom:36px;text-align:center}
     .section-heading h2{
-      font-size:clamp(1.7rem,3vw,2.5rem);
-      line-height:1.2;color:var(--deep);letter-spacing:-.03em;margin-bottom:8px;
+      font-size:clamp(1.8rem,3.4vw,2.6rem);
+      line-height:1.2;color:var(--deep);letter-spacing:-.03em;margin-bottom:10px;
     }
-    .section-heading p{margin-bottom:0;color:rgba(74,57,45,.75);max-width:680px}
+    .section-heading p{margin:0 auto;color:rgba(74,57,45,.75);max-width:620px}
+
+    .trust{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+      margin-top:18px;
+    }
+    .trust-item{
+      background:var(--white);border:1px solid var(--line);
+      border-radius:var(--radius-md);padding:18px 14px;
+      text-align:center;
+      box-shadow:0 6px 18px rgba(74,57,45,.05);
+    }
+    .trust-item .t-emoji{display:block;font-size:1.3rem;margin-bottom:6px}
+    .trust-item b{display:block;color:var(--deep);font-size:.98rem;line-height:1.5}
+    .trust-item span{display:block;color:rgba(74,57,45,.62);font-size:.85rem;margin-top:2px}
 
     .ethos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .ethos-card{
@@ -153,10 +169,12 @@
     .ethos-card:nth-child(2){background:var(--green-light)}
     .ethos-card:nth-child(3){background:var(--yellow-light)}
     .ethos-card:nth-child(4){background:var(--white)}
+    .ethos-card{text-align:center}
     .ethos-card h3{
       font-size:1.15rem;color:var(--deep);
       margin-bottom:6px;line-height:1.4;
-      display:flex;align-items:center;gap:10px;
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      flex-wrap:wrap;
     }
     .ethos-card p{margin-bottom:0;color:rgba(74,57,45,.78);font-size:.98rem}
 
@@ -169,10 +187,11 @@
     .service-card:nth-child(2){background:var(--green-light)}
     .service-card:nth-child(3){background:var(--yellow-light)}
     .service-card:nth-child(4){background:var(--blue-light)}
+    .service-card{text-align:center}
     .service-icon{
       width:48px;height:48px;border-radius:15px;
       display:grid;place-items:center;font-size:1.4rem;
-      background:var(--blue-main);margin-bottom:14px;
+      background:var(--blue-main);margin:0 auto 14px;
     }
     .service-card:nth-child(2) .service-icon{background:var(--secondary)}
     .service-card:nth-child(3) .service-icon{background:var(--accent)}
@@ -185,7 +204,8 @@
       background:var(--white);border:1px solid var(--line);
       border-radius:var(--radius-md);padding:24px;
       box-shadow:0 10px 28px rgba(74,57,45,.07);
-      display:flex;flex-direction:column;gap:6px;
+      display:flex;flex-direction:column;align-items:center;gap:6px;
+      text-align:center;
     }
     .package-card:nth-child(2){background:var(--green-light)}
     .package-card:nth-child(3){background:var(--yellow-light)}
@@ -203,7 +223,7 @@
     }
     .package-cta p{margin-bottom:14px;color:rgba(74,57,45,.8)}
 
-    .steps{display:grid;gap:0;max-width:640px}
+    .steps{display:grid;gap:0;max-width:560px;margin:0 auto}
     .step{
       display:flex;gap:16px;align-items:flex-start;
       position:relative;padding-bottom:26px;
@@ -227,7 +247,7 @@
     .step-body h3{font-size:1.1rem;color:var(--deep);margin-bottom:2px;line-height:1.5}
     .step-body p{margin-bottom:0;color:rgba(74,57,45,.75);font-size:.95rem}
 
-    .faq{display:grid;gap:12px;max-width:760px}
+    .faq{display:grid;gap:12px;max-width:720px;margin:0 auto;text-align:start}
     .faq details{
       background:var(--white);border:1px solid var(--line);
       border-radius:var(--radius-md);
@@ -260,15 +280,16 @@
       border-radius:var(--radius-lg);
       padding:clamp(24px,4vw,40px);
     }
-    .about-card p{margin-bottom:12px;max-width:760px}
+    .about-card{text-align:center}
+    .about-card p{margin:0 auto 12px;max-width:680px}
     .about-card p:last-child{margin-bottom:0}
 
     .contact-card{
       background:var(--white);border:1px solid var(--line);
       border-radius:var(--radius-md);padding:28px;
       box-shadow:0 10px 28px rgba(74,57,45,.07);
-      display:flex;flex-direction:column;align-items:flex-start;gap:16px;
-      max-width:520px;
+      display:flex;flex-direction:column;align-items:center;gap:16px;
+      max-width:480px;margin:0 auto;text-align:center;
     }
     .email-pill{
       display:inline-flex;background:var(--bg);border:1px solid var(--line);
@@ -281,8 +302,8 @@
     .footer{
       margin-top:48px;padding:28px;border-radius:var(--radius-lg);
       background:var(--deep);color:var(--bg);
-      display:flex;align-items:center;justify-content:space-between;
-      gap:20px;flex-wrap:wrap;
+      display:flex;flex-direction:column;align-items:center;
+      text-align:center;gap:12px;
     }
     .footer p{margin:0;color:rgba(234,247,252,.84)}
     .footer-link{
@@ -294,6 +315,8 @@
 
     @media (max-width:800px){
       .ethos-grid,.service-grid,.package-grid{grid-template-columns:1fr}
+      .trust{grid-template-columns:repeat(2,1fr)}
+      .section{padding:52px 0 0}
     }
     @media (max-width:640px){
       .topbar-inner{flex-wrap:wrap}
@@ -350,6 +373,53 @@
               <span class="lang-en">Explore services</span>
             </a>
           </div>
+        </div>
+      </div>
+
+      <div class="trust">
+        <div class="trust-item">
+          <span class="t-emoji">🤍</span>
+          <b>
+            <span class="lang-ar">سعر ثابت قبل البدء</span>
+            <span class="lang-en">Fixed price before we start</span>
+          </b>
+          <span>
+            <span class="lang-ar">بدون مفاجآت</span>
+            <span class="lang-en">No surprises</span>
+          </span>
+        </div>
+        <div class="trust-item">
+          <span class="t-emoji">🤙</span>
+          <b>
+            <span class="lang-ar">تعامل مباشر مع المهندسة</span>
+            <span class="lang-en">Direct with the engineer</span>
+          </b>
+          <span>
+            <span class="lang-ar">بدون وسطاء</span>
+            <span class="lang-en">No middlemen</span>
+          </span>
+        </div>
+        <div class="trust-item">
+          <span class="t-emoji">☀️</span>
+          <b>
+            <span class="lang-ar">كل شيء ملكك</span>
+            <span class="lang-en">You own everything</span>
+          </b>
+          <span>
+            <span class="lang-ar">الموقع والملفات والحسابات</span>
+            <span class="lang-en">Site, files, and accounts</span>
+          </span>
+        </div>
+        <div class="trust-item">
+          <span class="t-emoji">💕</span>
+          <b>
+            <span class="lang-ar">بالعربي والإنجليزي</span>
+            <span class="lang-en">Arabic &amp; English</span>
+          </b>
+          <span>
+            <span class="lang-ar">موقعك باللغتين</span>
+            <span class="lang-en">Your site in both languages</span>
+          </span>
         </div>
       </div>
     </section>
