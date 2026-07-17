@@ -249,6 +249,20 @@
     .step-body h3{font-size:1.1rem;color:var(--deep);margin-bottom:2px;line-height:1.5}
     .step-body p{margin-bottom:0;color:rgba(74,57,45,.75);font-size:.95rem}
 
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .work-card{
+      background:var(--white);border:1px solid var(--line);
+      border-radius:var(--radius-md);padding:22px;
+      box-shadow:0 10px 28px rgba(74,57,45,.07);
+      display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;
+      text-decoration:none;color:var(--deep);font-weight:700;
+      transition:.18s ease;
+    }
+    .work-card:hover{transform:translateY(-2px)}
+    .work-card:nth-child(2){background:var(--green-light)}
+    .work-card:nth-child(3){background:var(--yellow-light)}
+    .work-emoji{font-size:1.6rem;margin-bottom:4px}
+
     .faq{display:grid;gap:12px;max-width:720px;margin:0 auto;text-align:start}
     .faq details{
       background:var(--white);border:1px solid var(--line);
@@ -321,7 +335,7 @@
     .footer-link:hover{border-bottom-color:var(--bg)}
 
     @media (max-width:800px){
-      .ethos-grid,.service-grid,.package-grid{grid-template-columns:1fr}
+      .ethos-grid,.service-grid,.package-grid,.work-grid{grid-template-columns:1fr}
       .trust{grid-template-columns:repeat(2,1fr)}
       .section{padding:52px 0 0}
     }
@@ -343,6 +357,7 @@
         <a href="#services"><span class="lang-ar">الخدمات</span><span class="lang-en">Services</span></a>
         <a href="#process"><span class="lang-ar">كيف نعمل</span><span class="lang-en">Process</span></a>
         <a href="#packages"><span class="lang-ar">الباقات</span><span class="lang-en">Packages</span></a>
+        <a href="#work"><span class="lang-ar">نماذج</span><span class="lang-en">Work</span></a>
         <a href="#about"><span class="lang-ar">من أنا</span><span class="lang-en">About</span></a>
         <a href="#contact"><span class="lang-ar">تواصل معي</span><span class="lang-en">Contact</span></a>
       </nav>
@@ -792,6 +807,44 @@
             </p>
           </div>
         </details>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-heading">
+        <h2>
+          <span class="lang-ar">نماذج من عملي</span>
+          <span class="lang-en">Sample work</span>
+        </h2>
+        <p>
+          <span class="lang-ar">ثلاثة تطبيقات ببيانات تجريبية، مبنية بملف واحد بدون أي مكتبات ثقيلة.</span>
+          <span class="lang-en">Three demo apps with sample data, each built as a single file with no heavy frameworks.</span>
+        </p>
+      </div>
+
+      <div class="work-grid">
+        <a class="work-card" href="https://aishajabr25.github.io/expenses-dashboard/" target="_blank" rel="noopener">
+          <span class="work-emoji">💰</span>
+          <span class="lang-ar">لوحة المصروفات</span>
+          <span class="lang-en">Money Dashboard</span>
+        </a>
+        <a class="work-card" href="https://aishajabr25.github.io/workout-dashboard/" target="_blank" rel="noopener">
+          <span class="work-emoji">🏃</span>
+          <span class="lang-ar">لوحة التمارين</span>
+          <span class="lang-en">Workout Dashboard</span>
+        </a>
+        <a class="work-card" href="https://aishajabr25.github.io/nutrition-tracker/" target="_blank" rel="noopener">
+          <span class="work-emoji">🥗</span>
+          <span class="lang-ar">المتابعة الغذائية</span>
+          <span class="lang-en">Nutrition Tracker</span>
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-top:22px">
+        <a class="btn btn-soft" href="projects.html">
+          <span class="lang-ar">كل النماذج ↗</span>
+          <span class="lang-en">See all sample work ↗</span>
+        </a>
       </div>
     </section>
 
