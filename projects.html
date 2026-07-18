@@ -126,6 +126,25 @@
       color:var(--deep);font-weight:800;text-decoration:none;
     }
 
+    .footer{
+      margin-top:48px;padding:28px;border-radius:var(--radius-lg);
+      background:var(--deep);color:var(--bg);
+      display:flex;flex-direction:column;align-items:center;
+      text-align:center;gap:12px;
+    }
+    .footer p{margin:0;color:rgba(234,247,252,.84)}
+    .footer-logo{
+      font-weight:800;font-size:1.6rem;line-height:1;
+      color:var(--bg);direction:rtl;
+      text-shadow:2px 2px 0 rgba(0,0,0,.15);
+    }
+    .footer-link{
+      color:var(--bg);font-weight:700;font-size:.92rem;
+      text-decoration:none;border-bottom:1px solid rgba(234,247,252,.4);
+      padding-bottom:2px;white-space:nowrap;
+    }
+    .footer-link:hover{border-bottom-color:var(--bg)}
+
     @media (max-width:800px){
       .project-grid{grid-template-columns:1fr}
     }
@@ -241,6 +260,18 @@
         <span class="lang-en">← Back to home</span>
       </a>
     </div>
+
+    <footer class="footer">
+      <span class="footer-logo">عَئْوْش؛</span>
+      <p>
+        <span class="lang-ar">عائشة جبر — مواقع، هويات، برمجيات، وورشات ذكاء اصطناعي ☀️</span>
+        <span class="lang-en">Aisha Jabr — websites, brand identities, software, and AI workshops ☀️</span>
+      </p>
+      <a class="footer-link" href="terms.html">
+        <span class="lang-ar">الشروط والأحكام</span>
+        <span class="lang-en">Terms &amp; Conditions</span>
+      </a>
+    </footer>
   </main>
 
   <script>
